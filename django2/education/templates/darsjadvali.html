@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dars Jadvali</title>
+</head>
+<body>
+{% extends "master.html" %}
+{% block title %}
+about jadval
+{% endblock %}
+
+{% block content %}
+<table border='1'>
+  <tr>
+    <th>teacher</th>
+    <th>group</th>
+    <th>day</th>
+  </tr>
+  {% for x in jadval %}
+    <tr>
+      <td>{{ x.teacher_id }}</td>
+        <td>{{ x.group_id }}</td>
+      <td>{{ x.weekday_id }}</td>
+    </tr>
+  {% endfor %}
+</table>
+  <p>Back to <a href="/">main</a></p>
+
+{% endblock %}
+
+</body>
+</html>

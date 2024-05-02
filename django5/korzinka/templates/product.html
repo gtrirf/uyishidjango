@@ -1,0 +1,22 @@
+<title>Products</title>
+
+<body>
+<!--<img src="{{ products.image.url }}">-->
+
+<table border='1'>
+  <tr>
+    <th>Product</th>
+    <th>Make</th>
+    <th>price</th>
+  </tr>
+  {% for x in products %}
+    <tr>
+      <td>{{ x.productname }}</td>
+        <td>{{ x.make }}</td>
+      <td>{{ x.price }}</td>
+    </tr>
+  {% endfor %}
+
+</table>
+
+</body>

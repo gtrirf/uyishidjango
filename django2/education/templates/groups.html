@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>groups</title>
+</head>
+<body>
+{% extends "master.html" %}
+
+{% block title %}
+groups
+{% endblock %}
+
+{% block content %}
+
+  <ul>
+  {% for x in groups %}
+    <li>{{ x.groupname }}</li>
+  {% endfor %}
+</ul>
+
+  <p>Back to <a href="/">main</a></p>
+
+{% endblock %}
+</body>
+</html>

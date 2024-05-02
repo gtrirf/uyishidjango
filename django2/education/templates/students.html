@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body>
+{% extends "master.html" %}
+
+{% block title %}
+about students
+{% endblock %}
+
+{% block content %}
+
+<ul>
+  {% for x in students %}
+    <li>{{ x.firstname }} {{ x.lastname }} {{x.group_id}}</li>
+  {% endfor %}
+</ul>
+
+  <p>Back to <a href="/">main</a></p>
+
+{% endblock %}
+</body>
+</html>
